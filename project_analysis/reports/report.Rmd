@@ -1,0 +1,292 @@
+---
+title: "Markdown for CSC8631"
+author: "Lambros Lambri"
+date: "03/12/2020"
+output: html_document
+---
+
+
+
+
+# Devices people use to watch videos by each year
+
+
+### Desktop between 3rd and 6th year
+
+```{r eval=TRUE, echo=FALSE}
+
+
+video1 <- read.csv(file = '../data/cyber-security-3_video-stats.csv')
+video2 <- read.csv(file = '../data/cyber-security-4_video-stats.csv')
+video3 <- read.csv(file = '../data/cyber-security-5_video-stats.csv')
+video4 <- read.csv(file = '../data/cyber-security-6_video-stats.csv')
+
+dataset1 = video1[,c("desktop_device_percentage")]
+dataset2 = video2[,c("desktop_device_percentage")]
+dataset3 = video3[,c("desktop_device_percentage")]
+dataset4 = video4[,c("desktop_device_percentage")]
+mean(dataset1)
+dataset1
+dataset2
+dataset3
+dataset4
+
+datasetall = range(0,dataset1,dataset2,dataset3,dataset4)
+
+### Desktop data by each year
+
+plot(dataset1, type="o", col="blue",ann=FALSE,ylim=c(60,85), yaxs="i")
+axis(1, at=1:13, lab=c("1stVideo","2ndVideo","3rdVideo","4thVideo","5thVideo","6thVideo","7thVideo","8thVideo","9thVideo","10thVideo","11thVideo","12thVideo","13thVideo"))
+title(xlab="Videos", col.lab=rgb(0,0.5,0))
+title(ylab="Views", col.lab=rgb(0,0.5,0))
+lines(dataset2, type="o", pch=22, lty=2, col="red")
+lines(dataset3, type="o", pch=22, lty=2, col="green")
+lines(dataset4, type="o", pch=22, lty=2, col="purple")
+legend(1,datasetall[2], c("1styear","2ndyear","3rdyear","4thyear"), cex=0.8, 
+   col=c("blue","red","green","purple"), pch=21:22, lty=1:2);
+```
+
+### Mobile between 3rd and 6th year
+```{r eval=TRUE, echo=FALSE}
+#READ CSV FILE
+
+
+video1 <- read.csv(file = '../data/cyber-security-3_video-stats.csv')
+video2 <- read.csv(file = '../data/cyber-security-4_video-stats.csv')
+video3 <- read.csv(file = '../data/cyber-security-5_video-stats.csv')
+video4 <- read.csv(file = '../data/cyber-security-6_video-stats.csv')
+
+dataset1 = video1[,c("mobile_device_percentage")]
+dataset2 = video2[,c("mobile_device_percentage")]
+dataset3 = video3[,c("mobile_device_percentage")]
+dataset4 = video4[,c("mobile_device_percentage")]
+mean(dataset1)
+dataset1
+dataset2
+dataset3
+dataset4
+
+datasetall = range(0,dataset1,dataset2,dataset3,dataset4)
+
+plot(dataset1, type="o", col="blue",ann=FALSE,ylim=c(4,30), yaxs="i")
+axis(1, at=1:13, lab=c("1stVideo","2ndVideo","3rdVideo","4thVideo","5thVideo","6thVideo","7thVideo","8thVideo","9thVideo","10thVideo","11thVideo","12thVideo","13thVideo"))
+title(xlab="Videos", col.lab=rgb(0,0.5,0))
+title(ylab="Views", col.lab=rgb(0,0.5,0))
+lines(dataset2, type="o", pch=22, lty=2, col="red")
+lines(dataset3, type="o", pch=22, lty=2, col="green")
+lines(dataset4, type="o", pch=22, lty=2, col="purple")
+legend(1,datasetall[2], c("1styear","2ndyear","3rdyear","4thyear"), cex=0.8, 
+   col=c("blue","red","green","purple"), pch=21:22, lty=1:2);
+
+
+
+``` 
+
+### Tablet between 3rd and 6th year
+
+```{r eval=TRUE, echo=FALSE}
+#READ CSV FILE
+
+
+video1 <- read.csv(file = '../data/cyber-security-3_video-stats.csv')
+video2 <- read.csv(file = '../data/cyber-security-4_video-stats.csv')
+video3 <- read.csv(file = '../data/cyber-security-5_video-stats.csv')
+video4 <- read.csv(file = '../data/cyber-security-6_video-stats.csv')
+
+dataset1 = video1[,c("tablet_device_percentage")]
+dataset2 = video2[,c("tablet_device_percentage")]
+dataset3 = video3[,c("tablet_device_percentage")]
+dataset4 = video4[,c("tablet_device_percentage")]
+dataset1
+dataset2
+dataset3
+dataset4
+
+datasetall = range(0,dataset1,dataset2,dataset3,dataset4)
+
+plot(dataset1, type="o", col="blue",ann=FALSE,ylim=c(4,30), yaxs="i")
+axis(1, at=1:13, lab=c("1stVideo","2ndVideo","3rdVideo","4thVideo","5thVideo","6thVideo","7thVideo","8thVideo","9thVideo","10thVideo","11thVideo","12thVideo","13thVideo"))
+title(xlab="Videos", col.lab=rgb(0,0.5,0))
+title(ylab="Views", col.lab=rgb(0,0.5,0))
+lines(dataset2, type="o", pch=22, lty=2, col="red")
+lines(dataset3, type="o", pch=22, lty=2, col="green")
+lines(dataset4, type="o", pch=22, lty=2, col="purple")
+legend(1,datasetall[2], c("1styear","2ndyear","3rdyear","4thyear"), cex=0.8, 
+   col=c("blue","red","green","purple"), pch=21:22, lty=1:2);
+
+
+
+``` 
+
+
+### Observation
+
+From the numerical data and graphical data we can observe that throught the years the majority of people use Desktop to watch the videos for the module Cyber Security with mobile and tablet coming 2nd and 3rd but being relatively close with each other. However we can see one more thing. With each passing year the vieweship by desktop has been dropping substantially and for mobiles to skyrocket. Especially for the 1st video on the 4th year which we can see that 30% of the people watched it through the phone which it is 3 times the average mean of what it usually gets for the phone.
+
+
+## Viewership by Continents
+
+### Europe
+```{r eval=TRUE, echo=FALSE}
+#READ CSV FILE
+
+
+video1 <- read.csv(file = '../data/cyber-security-3_video-stats.csv')
+video2 <- read.csv(file = '../data/cyber-security-4_video-stats.csv')
+video3 <- read.csv(file = '../data/cyber-security-5_video-stats.csv')
+video4 <- read.csv(file = '../data/cyber-security-6_video-stats.csv')
+
+dataset1 = video1[,c("europe_views_percentage")]
+dataset2 = video2[,c("europe_views_percentage")]
+dataset3 = video3[,c("europe_views_percentage")]
+dataset4 = video4[,c("europe_views_percentage")]
+dataset1
+dataset2
+dataset3
+dataset4
+
+datasetall = range(0,dataset1,dataset2,dataset3,dataset4)
+
+plot(dataset1, type="o", col="blue",ann=FALSE,ylim=c(50,70), yaxs="i")
+axis(1, at=1:13, lab=c("1stVideo","2ndVideo","3rdVideo","4thVideo","5thVideo","6thVideo","7thVideo","8thVideo","9thVideo","10thVideo","11thVideo","12thVideo","13thVideo"))
+title(xlab="Videos", col.lab=rgb(0,0.5,0))
+title(ylab="Views", col.lab=rgb(0,0.5,0))
+lines(dataset2, type="o", pch=22, lty=2, col="red")
+lines(dataset3, type="o", pch=22, lty=2, col="green")
+lines(dataset4, type="o", pch=22, lty=2, col="purple")
+legend(1,datasetall[2], c("1styear","2ndyear","3rdyear","4thyear"), cex=0.8, 
+   col=c("blue","red","green","purple"), pch=21:22, lty=1:2);
+
+
+``` 
+
+
+### Asia
+
+```{r eval=TRUE, echo=FALSE}
+#READ CSV FILE
+
+
+video1 <- read.csv(file = '../data/cyber-security-3_video-stats.csv')
+video2 <- read.csv(file = '../data/cyber-security-4_video-stats.csv')
+video3 <- read.csv(file = '../data/cyber-security-5_video-stats.csv')
+video4 <- read.csv(file = '../data/cyber-security-6_video-stats.csv')
+
+dataset1 = video1[,c("asia_views_percentage")]
+dataset2 = video2[,c("asia_views_percentage")]
+dataset3 = video3[,c("asia_views_percentage")]
+dataset4 = video4[,c("asia_views_percentage")]
+dataset1
+dataset2
+dataset3
+dataset4
+
+datasetall = range(0,dataset1,dataset2,dataset3,dataset4)
+
+plot(dataset1, type="o", col="blue",ann=FALSE,ylim=c(5,40), yaxs="i")
+axis(1, at=1:13, lab=c("1stVideo","2ndVideo","3rdVideo","4thVideo","5thVideo","6thVideo","7thVideo","8thVideo","9thVideo","10thVideo","11thVideo","12thVideo","13thVideo"))
+title(xlab="Videos", col.lab=rgb(0,0.5,0))
+title(ylab="Views", col.lab=rgb(0,0.5,0))
+lines(dataset2, type="o", pch=22, lty=2, col="red")
+lines(dataset3, type="o", pch=22, lty=2, col="green")
+lines(dataset4, type="o", pch=22, lty=2, col="purple")
+legend(1,datasetall[2], c("1styear","2ndyear","3rdyear","4thyear"), cex=0.8, 
+   col=c("blue","red","green","purple"), pch=21:22, lty=1:2);
+
+
+``` 
+
+
+### North America
+
+```{r eval=TRUE, echo=FALSE}
+#READ CSV FILE
+
+
+video1 <- read.csv(file = '../data/cyber-security-3_video-stats.csv')
+video2 <- read.csv(file = '../data/cyber-security-4_video-stats.csv')
+video3 <- read.csv(file = '../data/cyber-security-5_video-stats.csv')
+video4 <- read.csv(file = '../data/cyber-security-6_video-stats.csv')
+
+dataset1 = video1[,c("north_america_views_percentage")]
+dataset2 = video2[,c("north_america_views_percentage")]
+dataset3 = video3[,c("north_america_views_percentage")]
+dataset4 = video4[,c("north_america_views_percentage")]
+dataset1
+dataset2
+dataset3
+dataset4
+
+datasetall = range(0,dataset1,dataset2,dataset3,dataset4)
+
+plot(dataset1, type="o", col="blue",ann=FALSE,ylim=c(5,40), yaxs="i")
+axis(1, at=1:13, lab=c("1stVideo","2ndVideo","3rdVideo","4thVideo","5thVideo","6thVideo","7thVideo","8thVideo","9thVideo","10thVideo","11thVideo","12thVideo","13thVideo"))
+title(xlab="Videos", col.lab=rgb(0,0.5,0))
+title(ylab="Views", col.lab=rgb(0,0.5,0))
+lines(dataset2, type="o", pch=22, lty=2, col="red")
+lines(dataset3, type="o", pch=22, lty=2, col="green")
+lines(dataset4, type="o", pch=22, lty=2, col="purple")
+legend(1,datasetall[2], c("1styear","2ndyear","3rdyear","4thyear"), cex=0.8, 
+   col=c("blue","red","green","purple"), pch=21:22, lty=1:2);
+
+
+``` 
+
+
+
+```{r eval=TRUE, echo=FALSE, warning = FALSE,message = FALSE}
+#READ CSV FILE
+
+
+
+video1 <- read.csv(file = '../data/cyber-security-3_video-stats.csv')
+video2 <- read.csv(file = '../data/cyber-security-4_video-stats.csv')
+video3 <- read.csv(file = '../data/cyber-security-5_video-stats.csv')
+video4 <- read.csv(file = '../data/cyber-security-6_video-stats.csv')
+
+
+# library
+library(ggplot2)
+library(dplyr)
+library(hrbrthemes)
+dataset1 = video1[,c("europe_views_percentage")]
+dataset2 = video2[,c("europe_views_percentage")]
+dataset3 = video3[,c("europe_views_percentage")]
+dataset4 = video4[,c("europe_views_percentage")]
+# dataset:
+data=data.frame(type=c( rep("variable 1", 13), rep("variable 2", 13), rep("variable 3", 13), rep("variable 4", 13) ),value=c(dataset1,dataset2,dataset3,dataset4))
+
+p <- data %>%
+  ggplot( aes(x=value, fill=type)) +
+  geom_histogram( color="#e9ecef", alpha=0.6, position = 'identity') +
+  scale_fill_manual(values=c("#69b3a2", "#404080", "#b36972","#afb369")) +
+  theme_ipsum() +
+  labs(fill="")
+p
+``` 
+
+
+#### Enrollments
+
+Lets take the enrollemnts csv to check how many people enrolled ecah year for theasse course
+
+
+#### CRISP-DM cRoss Industry Standard Process for Data Mining
+
+It provided me a roadmap to follow while planning and carrying out my data mining project.
+
+Firstly i had to assess the situation that i had. I was given several csv files and had to understand what each csv file represented and what each collumn showed. I decided to choose the video stats csv and my goals for this project were to show how each year the percentage of people using different devices to watch the lectures for the cyber security module. Then i went foward and wanted to see if there was a relation between what device you use by where your from. For example if people from Europe prefer to use the desktop more than their mobile.
+
+Data Understanding -> hypothesis
+Collecting, describing, explore, data quality.
+
+When collecting the data i noticed that in there were no video stats for the 1st two years of the module meaning the csv files started with (cyber_security-3-video-stats up to cyber_security-7-video-stats) therefore i decided when starting this project to not include any documents before the 3rd year because the quality of the data wasn't gonna be good.
+
+
+
+The Markdown reports should chronicle your journey through your analysis, and discuss how you've used the various stages of CRISP-DM in carrying this out. 
+
+
+#### Conclusion
+
+if i write something here what will it appear as
