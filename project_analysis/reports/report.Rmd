@@ -13,7 +13,7 @@ output: html_document
 
 # Summary
 
-We have a data that acts as 
+We have a data that acts as d
 
 
 
