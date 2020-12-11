@@ -8,12 +8,21 @@ output: html_document
 
 
 
-# Devices people use to watch videos by each year
 
+
+
+# Summary
+
+We have a data that acts as 
+
+
+
+# Devices people use to watch videos by each year
 
 ### Desktop between 3rd and 6th year
 
 ```{r eval=TRUE, echo=FALSE}
+
 
 
 video1 <- read.csv(file = '../data/cyber-security-3_video-stats.csv')
@@ -119,10 +128,14 @@ legend(1,datasetall[2], c("1styear","2ndyear","3rdyear","4thyear"), cex=0.8,
 ``` 
 
 
-### Observation
+### Data Analysis
 
-From the numerical data and graphical data we can observe that throught the years the majority of people use Desktop to watch the videos for the module Cyber Security with mobile and tablet coming 2nd and 3rd but being relatively close with each other. However we can see one more thing. With each passing year the vieweship by desktop has been dropping substantially and for mobiles to skyrocket. Especially for the 1st video on the 4th year which we can see that 30% of the people watched it through the phone which it is 3 times the average mean of what it usually gets for the phone.
+From the numerical data and graphical data we can observe that throught the years the majority of people use Desktop to watch the videos for the module Cyber Security with mobile and tablet coming 2nd and 3rd but being relatively close with each other. However we can see one more thing. With each passing year the viewership by desktop has been dropping substantially and for mobiles to skyrocket. Especially for the 1st video on the 4th year which we can see that 30% of the people watched it through the phone which it is 3 times the average mean of what it usually gets for the phone.
 
+
+### Assumption
+
+I got very interested by the data therefore i wanted to check if there was a relation in that rapid change of device usage to the geographical location of the people watching it. Therefore i did the same graphical and numerical data for each continent for the same 4 years.
 
 ## Viewership by Continents
 
@@ -233,6 +246,13 @@ legend(1,datasetall[2], c("1styear","2ndyear","3rdyear","4thyear"), cex=0.8,
 ``` 
 
 
+## Data Analysis
+
+From the data I could see that there was a drop in the people from Europe and a rise in the people from Asia during the last 4 years. The number of people from North America stayed around the same during the 4 years.
+
+
+## ggplot2 Graphs for Europe and Asia
+
 
 ```{r eval=TRUE, echo=FALSE, warning = FALSE,message = FALSE}
 #READ CSV FILE
@@ -254,7 +274,39 @@ dataset2 = video2[,c("europe_views_percentage")]
 dataset3 = video3[,c("europe_views_percentage")]
 dataset4 = video4[,c("europe_views_percentage")]
 # dataset:
-data=data.frame(type=c( rep("variable 1", 13), rep("variable 2", 13), rep("variable 3", 13), rep("variable 4", 13) ),value=c(dataset1,dataset2,dataset3,dataset4))
+data=data.frame(type=c( rep("1st year", 13), rep("2nd year", 13), rep("3rd year", 13), rep("4th year", 13) ),value=c(dataset1,dataset2,dataset3,dataset4))
+
+p <- data %>%
+  ggplot( aes(x=value, fill=type)) +
+  geom_histogram( color="#e9ecef", alpha=0.6, position = 'identity') +
+  scale_fill_manual(values=c("#69b3a2", "#404080", "#b36972","#afb369")) +
+  theme_ipsum() +
+  labs(fill="")
+p
+``` 
+
+
+```{r eval=TRUE, echo=FALSE, warning = FALSE,message = FALSE}
+#READ CSV FILE
+
+
+
+video1 <- read.csv(file = '../data/cyber-security-3_video-stats.csv')
+video2 <- read.csv(file = '../data/cyber-security-4_video-stats.csv')
+video3 <- read.csv(file = '../data/cyber-security-5_video-stats.csv')
+video4 <- read.csv(file = '../data/cyber-security-6_video-stats.csv')
+
+
+# library
+library(ggplot2)
+library(dplyr)
+library(hrbrthemes)
+dataset1 = video1[,c("asia_views_percentage")]
+dataset2 = video2[,c("asia_views_percentage")]
+dataset3 = video3[,c("asia_views_percentage")]
+dataset4 = video4[,c("asia_views_percentage")]
+# dataset:
+data=data.frame(type=c( rep("1st year", 13), rep("2nd year", 13), rep("3rd year", 13), rep("4th year", 13) ),value=c(dataset1,dataset2,dataset3,dataset4))
 
 p <- data %>%
   ggplot( aes(x=value, fill=type)) +
