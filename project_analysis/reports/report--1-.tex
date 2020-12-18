@@ -1,0 +1,364 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\hypertarget{how-many-people-are-there-in-each-enrollment}{%
+\subsection{How many people are there in each
+enrollment}\label{how-many-people-are-there-in-each-enrollment}}
+
+\hypertarget{how-many-of-those-people-fail-the-first-question}{%
+\subsection{How many of those people fail the first
+question}\label{how-many-of-those-people-fail-the-first-question}}
+
+\hypertarget{how-many-watched-the-video-about}{%
+\subsection{How many watched the video
+about}\label{how-many-watched-the-video-about}}
+
+Welcome to the course Why would anyone want your data? Preserving
+privacy in cloud storage: privacy by design Staying safe online:
+personal perspectives Privacy online and offline
+
+\hypertarget{how-many-of-those-got-the-quiz-correct}{%
+\subsection{How many of those got the quiz
+correct}\label{how-many-of-those-got-the-quiz-correct}}
+
+\hypertarget{was-there-a-relation-between-if-you-watched-the-video-or-not-and-succeeding-the-quiz}{%
+\subsection{Was there a relation between if you watched the video or not
+and succeeding the
+quiz}\label{was-there-a-relation-between-if-you-watched-the-video-or-not-and-succeeding-the-quiz}}
+
+\hypertarget{total-views-by-each-year-for-each-video}{%
+\subsubsection{Total views by each year for each
+video}\label{total-views-by-each-year-for-each-video}}
+
+\includegraphics{report--1-_files/figure-latex/unnamed-chunk-2-1.pdf}
+
+\hypertarget{i-decided-to-see-if-there-was-a-relation-between-people-watching-the-videos-and-being-able-to-answer-the-questions-correctly.-therefore-i-took-the-data-from-the-enrollemnts.csv-to-check-for-each-year-the-amount-of-people-that-were-enrolled.-i-decided-to-check-for-the-last-4-years.}{%
+\subsection{I decided to see if there was a relation between people
+watching the videos and being able to answer the questions correctly.
+Therefore i took the data from the enrollemnts.csv to check for each
+year the amount of people that were enrolled. I decided to check for the
+last 4
+years.}\label{i-decided-to-see-if-there-was-a-relation-between-people-watching-the-videos-and-being-able-to-answer-the-questions-correctly.-therefore-i-took-the-data-from-the-enrollemnts.csv-to-check-for-each-year-the-amount-of-people-that-were-enrolled.-i-decided-to-check-for-the-last-4-years.}}
+
+\hypertarget{year-7}{%
+\subsubsection{Year 7}\label{year-7}}
+
+\begin{verbatim}
+## [1] 2342
+\end{verbatim}
+
+\hypertarget{year-6}{%
+\subsubsection{Year 6}\label{year-6}}
+
+\begin{verbatim}
+## [1] 3175
+\end{verbatim}
+
+\hypertarget{year-5}{%
+\subsubsection{Year 5}\label{year-5}}
+
+\begin{verbatim}
+## [1] 3544
+\end{verbatim}
+
+\hypertarget{year-4}{%
+\subsubsection{Year 4}\label{year-4}}
+
+\begin{verbatim}
+## [1] 3992
+\end{verbatim}
+
+Then I found the amount of people that got the first question correct by
+each year. I eliminated any any data that wasn't correctly inputted
+(NA).
+
+\hypertarget{year-7-1}{%
+\subsubsection{Year 7}\label{year-7-1}}
+
+\begin{verbatim}
+## [1] 570
+\end{verbatim}
+
+\hypertarget{year-6-1}{%
+\subsubsection{Year 6}\label{year-6-1}}
+
+\begin{verbatim}
+## [1] 619
+\end{verbatim}
+
+\hypertarget{year-5-1}{%
+\subsubsection{Year 5}\label{year-5-1}}
+
+\begin{verbatim}
+## [1] 1040
+\end{verbatim}
+
+\hypertarget{year-4-1}{%
+\subsubsection{Year 4}\label{year-4-1}}
+
+\begin{verbatim}
+## [1] 1034
+\end{verbatim}
+
+Then I decided to measure the views of total views for the 5 videos that
+were uploaded and you were supposed to see before answering the quiz for
+each year. I then found the average total views for all the 5 videos
+combined.
+
+\hypertarget{year-7-2}{%
+\subsubsection{Year 7}\label{year-7-2}}
+
+\begin{verbatim}
+## [1] 629
+\end{verbatim}
+
+\hypertarget{year-6-2}{%
+\subsubsection{Year 6}\label{year-6-2}}
+
+\begin{verbatim}
+## [1] 689.4
+\end{verbatim}
+
+\hypertarget{year-5-2}{%
+\subsubsection{Year 5}\label{year-5-2}}
+
+\begin{verbatim}
+## [1] 1095.8
+\end{verbatim}
+
+\hypertarget{year-4-2}{%
+\subsubsection{Year 4}\label{year-4-2}}
+
+\begin{verbatim}
+## [1] 1137.4
+\end{verbatim}
+
+I then decided to divide the mean mean videos over the enrollment number
+so all the numbers will be proportionally equal.
+
+\hypertarget{year-7-3}{%
+\subsubsection{Year 7}\label{year-7-3}}
+
+\begin{verbatim}
+## [1] 0.2685739
+\end{verbatim}
+
+\hypertarget{year-6-3}{%
+\subsubsection{Year 6}\label{year-6-3}}
+
+\begin{verbatim}
+## [1] 0.2171339
+\end{verbatim}
+
+\hypertarget{year-5-3}{%
+\subsubsection{Year 5}\label{year-5-3}}
+
+\begin{verbatim}
+## [1] 0.3091986
+\end{verbatim}
+
+\hypertarget{year-4-3}{%
+\subsubsection{Year 4}\label{year-4-3}}
+
+\begin{verbatim}
+## [1] 0.2849198
+\end{verbatim}
+
+From this data we can observe that most people that watched the people
+proportionally wise was at the 5th year with the 6th year coming last by
+a lot.
+
+Now we are going to see who were the most people proportionally that got
+the most correct answer. We are going to achieve this by diving the
+question correctness by the enrollment size for each year.
+
+\hypertarget{year-7-4}{%
+\subsubsection{Year 7}\label{year-7-4}}
+
+\begin{verbatim}
+## [1] 0.2433817
+\end{verbatim}
+
+\hypertarget{year-6-4}{%
+\subsubsection{Year 6}\label{year-6-4}}
+
+\begin{verbatim}
+## [1] 0.1949606
+\end{verbatim}
+
+\hypertarget{year-5-4}{%
+\subsubsection{Year 5}\label{year-5-4}}
+
+\begin{verbatim}
+## [1] 0.2934537
+\end{verbatim}
+
+\hypertarget{year-4-4}{%
+\subsubsection{Year 4}\label{year-4-4}}
+
+\begin{verbatim}
+## [1] 0.259018
+\end{verbatim}
+
+As we can see from the data that i have gathered we can see a very
+similar result to the previous exercise that I did. This time again i
+find the Year 5 to be the highest year with the most student that got
+the result correct and the Year 6 to have the lowest correct results.
+Furthermore the Year 4 and 7 were again very close in both aspects (
+question/size and meanvideo/size) but also both of them are in the same
+order as in the previous having year 4 coming second and year 7 coming
+last.
+
+These were 4 cases for this module. If it was possible i would increase
+the data to be more precise with my measurements cause I know that 4
+years are not that secure for the error handling but I can't cause the
+data for the video stats doesn't exist before year 3th.
+
+I will now plot a graph to show you the data more clearly.
+
+\includegraphics{report--1-_files/figure-latex/unnamed-chunk-23-1.pdf}
+\#\# Assumption
+
+From this my assumption is that there is indeed a relation between the
+time to give to watch a video about the subject and answering the quiz
+question correctly even if the videos are not all relevant to the
+question being asked. It seems that people that will do good at the quiz
+are people that watch most if not all of the videos.
+
+\hypertarget{what-type-of-device-did-they-use-and-did-it-have-any-relation-with-the-outcome}{%
+\subsection{What type of device did they use and did it have any
+relation with the
+outcome?}\label{what-type-of-device-did-they-use-and-did-it-have-any-relation-with-the-outcome}}
+
+\hypertarget{summary}{%
+\section{Summary}\label{summary}}
+
+I was given data for the video stats from the module cyber-security. I
+extracted the statistics for device usage.
+
+\hypertarget{assumptions}{%
+\section{Assumptions}\label{assumptions}}
+
+My Assumption is if there is a relation to what device you are using
+with the likelihood that you are going to watch the videos.
+
+\includegraphics{report--1-_files/figure-latex/unnamed-chunk-24-1.pdf}
+
+\includegraphics{report--1-_files/figure-latex/unnamed-chunk-25-1.pdf}
+
+\includegraphics{report--1-_files/figure-latex/unnamed-chunk-26-1.pdf}
+
+We can observe that the majority of the people watch the videos from
+their Desktop except for the 1st step in the video which is the
+introduction of the course therefroe it doesn't have any important parts
+they need to take into account. Year 6 was the highest for mobile and
+the Year 5 was the highest for the tablet. Therefore lets compare how
+they students did between 2.2 to 3 for tablet and mobile for all years.
+cause the data is more constant around that region. Therefore the 3.11
+quiz i believe is the most optimal one to choose with 3 multiple choices
+cause we will see the where each student watch each video up to the
+point of the quiz.
+
+We find out through data wrangling that the number for correct answers
+based on each year proportionally are the exact.
+
+\hypertarget{year-7-5}{%
+\subsubsection{Year 7}\label{year-7-5}}
+
+\begin{verbatim}
+## [1] 0.3142613
+\end{verbatim}
+
+\hypertarget{year-6-5}{%
+\subsubsection{Year 6}\label{year-6-5}}
+
+\begin{verbatim}
+## [1] 0.2513386
+\end{verbatim}
+
+\hypertarget{year-5-5}{%
+\subsubsection{Year 5}\label{year-5-5}}
+
+\begin{verbatim}
+## [1] 0.4616253
+\end{verbatim}
+
+\hypertarget{year-4-5}{%
+\subsubsection{Year 4}\label{year-4-5}}
+
+\begin{verbatim}
+## [1] 0.4063126
+\end{verbatim}
+
+\includegraphics{report--1-_files/figure-latex/unnamed-chunk-31-1.pdf}
+\includegraphics{report--1-_files/figure-latex/unnamed-chunk-32-1.pdf}
+\includegraphics{report--1-_files/figure-latex/unnamed-chunk-33-1.pdf}
+
+\#\#Summarise
+
+There doesn't seem to be any relation between what device do you use and
+how well your results are in the quiz.
+
+\end{document}

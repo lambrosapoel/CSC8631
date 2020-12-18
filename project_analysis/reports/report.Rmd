@@ -6,17 +6,30 @@ output: html_document
 ---
 
 
+```{r setup, include=FALSE}
+# Knitr setup
+
+knitr::opts_knit$set(root.dir= normalizePath('..'))
+```
+
+```{r include=FALSE}
+# Load project
+library("ProjectTemplate")
+load.project()
 
 
+```
 
+
+```{r eval=TRUE, echo=FALSE}
+question1
+
+```
 
 
 # Summary
 
-We have a data that acts as d
- ssss
- 
- sss
+I was given data for the video stats from the module cyber security. I extracted the statistics for device usage 
 
 
 # Devices people use to watch videos by each year

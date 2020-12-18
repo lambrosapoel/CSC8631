@@ -1,11 +1,41 @@
+commit 5935b04bbc6b893338dea910c1606611f9994bf1
+Author: lambrosapoel <mikasack3rman@gmail.com>
+Date:   Fri Dec 10 09:41:32 2020 +0000
+
+    Analysis Observations Conclusion
+
+commit 200a7231c162ef02bbec4c40cb89895d026ecfff
+Author: lambrosapoel <mikasack3rman@gmail.com>
+Date:   Fri Dec 8 20:40:48 2020 +0000
+
+    Added more graphs and 2plotgg on the markdown
+
+commit f31120c19f42cf2a2aa86428f24346bdcb5105fd
+Author: lambrosapoel <mikasack3rman@gmail.com>
+Date:   Fri Dec 8 16:20:22 2020 +0000
+
+    Added first graph on the markdown
+
+commit 30e30b5be5c614bd4225fb40f6b03730c8d5b24c
+Author: lambrosapoel <mikasack3rman@gmail.com>
+Date:   Fri Dec 7 06:37:43 2020 +0000
+
+    Added the markdown
+
+commit 9acce1667712c9abbd9c2ecb323a6be48ffa4bda
+Author: lambrosapoel <mikasack3rman@gmail.com>
+Date:   Thu Dec 6 19:20:09 2020 +0000
+
+    Added some preprossesing for munge
+
 commit fdf58971707d8a4b153456861eba15cfdd4ebdb7
 Author: lambrosapoel <mikasack3rman@gmail.com>
-Date:   Thu Dec 10 16:08:42 2020 +0000
+Date:   Thu Dec 5 16:08:42 2020 +0000
 
-    Project added more video stats
+    Added Csv Files for the video stats
 
 commit bf3fd320065b1b4930091ed3a8ec9911d69704c7
 Author: lambrosapoel <mikasack3rman@gmail.com>
-Date:   Thu Dec 10 15:53:36 2020 +0000
+Date:   Thu Dec 2 11:53:36 2020 +0000
 
     Initial commit
